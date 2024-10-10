@@ -1,7 +1,6 @@
 // lib/services/telegram_service.dart
 import 'dart:js' as js;
 import 'package:flutter/material.dart';
-import '../js/telegram_web_app.dart';
 import '../models/user.dart';
 
 class TelegramService {
@@ -47,7 +46,7 @@ class TelegramService {
   Color _hexToColor(String hex) {
     hex = hex.replaceAll('#', '');
     if (hex.length == 6) {
-      hex = 'FF' + hex; // Добавляем прозрачность
+      hex = 'FF$hex'; // Добавляем прозрачность
     }
     return Color(int.parse('0x$hex'));
   }
