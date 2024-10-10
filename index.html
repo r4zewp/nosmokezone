@@ -18,7 +18,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Stop smoking just sitting in Telegram">
+  <meta name="description" content="Stop smoking just being in Telegram">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,8 +32,33 @@
   <title>Помощник для бросающих курить</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <link rel="manifest" href="manifest.json">
+  <script>
+    if (typeof Telegram === 'undefined') {
+      Telegram = {
+        WebApp: {
+          initData: '',
+          initDataUnsafe: {},
+          version: '6.0',
+          platform: 'web',
+          colorScheme: 'light',
+          themeParams: {},
+          isExpanded: true,
+          viewportHeight: window.innerHeight,
+          viewportStableHeight: window.innerHeight,
+          isClosingConfirmationEnabled: false,
+          setHeaderColor: function () {},
+          setBackgroundColor: function () {},
+          onEvent: function () {},
+          offEvent: function () {},
+          sendData: function () {},
+          expand: function () {},
+          close: function () {},
+        },
+      };
+    }
+  </script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
